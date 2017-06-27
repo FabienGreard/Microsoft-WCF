@@ -8,7 +8,7 @@ using System.Data;
 
 namespace data
 {
-    class cl_cad
+    public class cl_cad
     {
         private string cnx;                             //Chemin d'accès
 

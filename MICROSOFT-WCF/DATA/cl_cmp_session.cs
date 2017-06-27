@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace data
 {
-    class cl_cmp_session
+    public class cl_cmp_session
     {
         public string selectALLByToken(string token)
         {

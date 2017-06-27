@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{EC28A8B7-35A6-4E2B-A59D-62A20DDDFD84}</ProjectGuid>
+    <ProjectGuid>{3B2DF706-765D-4459-A4C8-389AD8ADC90C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>dll_client_cut</RootNamespace>
-    <AssemblyName>dll_client_cut</AssemblyName>
+    <RootNamespace>logique</RootNamespace>
+    <AssemblyName>logique</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -40,10 +40,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="dll_cut.cs" />
+    <Compile Include="cl_cam.cs" />
+    <Compile Include="cl_cm_auth.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\data\data.csproj">
+      <Project>{f411a870-cb50-4c70-b047-1ee821ad9dd9}</Project>
+      <Name>data</Name>
+    </ProjectReference>
     <ProjectReference Include="..\dll_stg\dll_stg.csproj">
       <Project>{b959a93a-0722-4802-b3c7-d302aa545067}</Project>
       <Name>dll_stg</Name>

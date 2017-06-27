@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DE32944A-B89D-4382-896E-D400DD997B02}</ProjectGuid>
+    <ProjectGuid>{317440FA-57D7-4E70-86E7-6C9A3D49A7E4}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>ConsoleApp1</RootNamespace>
-    <AssemblyName>ConsoleApp1</AssemblyName>
+    <RootNamespace>server.cs</RootNamespace>
+    <AssemblyName>server.cs</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -50,10 +50,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ClassLibrary2\service.csproj">
-      <Project>{ef446026-d82f-4491-bd82-ce64a8d059c5}</Project>
-      <Name>service</Name>
-    </ProjectReference>
     <ProjectReference Include="..\dll_service_contract\dll_service_contract.csproj">
       <Project>{8a58f301-fc74-4a63-8e29-43b95e5c82d8}</Project>
       <Name>dll_service_contract</Name>

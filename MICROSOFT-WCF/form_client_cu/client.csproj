@@ -34,6 +34,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -51,8 +52,11 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="cu.cs" />
+    <Compile Include="cl_cuc.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -74,6 +78,20 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\dll_client_cut\dll_client_cut.csproj">
+      <Project>{ec28a8b7-35a6-4e2b-a59d-62a20dddfd84}</Project>
+      <Name>dll_client_cut</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\dll_service_contract\dll_service_contract.csproj">
+      <Project>{8a58f301-fc74-4a63-8e29-43b95e5c82d8}</Project>
+      <Name>dll_service_contract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\dll_stg\dll_stg.csproj">
+      <Project>{b959a93a-0722-4802-b3c7-d302aa545067}</Project>
+      <Name>dll_stg</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

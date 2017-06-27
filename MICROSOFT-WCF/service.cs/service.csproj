@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{EF446026-D82F-4491-BD82-CE64A8D059C5}</ProjectGuid>
+    <ProjectGuid>{1C8CA736-AB14-46CD-AA63-9E7960A07DEB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ClassLibrary2</RootNamespace>
-    <AssemblyName>ClassLibrary2</AssemblyName>
+    <RootNamespace>service.cs</RootNamespace>
+    <AssemblyName>service.cs</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -51,6 +51,10 @@
     <ProjectReference Include="..\dll_stg\dll_stg.csproj">
       <Project>{b959a93a-0722-4802-b3c7-d302aa545067}</Project>
       <Name>dll_stg</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\logique\logique.csproj">
+      <Project>{3b2df706-765d-4459-a4c8-389ad8adc90c}</Project>
+      <Name>logique</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

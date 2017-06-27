@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace dara
+namespace data
 {
-    class cl_cmp_person
+    public class cl_cmp_person
     {
         public string connectPerson(string email, string password)
         {
