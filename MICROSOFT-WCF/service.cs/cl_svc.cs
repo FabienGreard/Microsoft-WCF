@@ -16,7 +16,7 @@ namespace service
         {
             if (checkToken(msg).statut_op)
             {
-                cl_cam.resolveService(msg);
+                this.msg = cl_cam.resolveService(msg);
             }
             return this.msg;
         }

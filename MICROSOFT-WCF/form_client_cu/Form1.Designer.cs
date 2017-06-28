@@ -33,8 +33,7 @@
             this.password = new System.Windows.Forms.TextBox();
             this.email = new System.Windows.Forms.TextBox();
             this.click_validate = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.token = new System.Windows.Forms.Label();
             this.connect = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -80,23 +79,14 @@
             this.click_validate.UseVisualStyleBackColor = true;
             this.click_validate.Click += new System.EventHandler(this.click_validate_Click);
             // 
-            // label3
+            // token
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 21);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 17);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "Token:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(13, 52);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(71, 17);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "TokenExp";
+            this.token.AutoSize = true;
+            this.token.Location = new System.Drawing.Point(12, 21);
+            this.token.Name = "token";
+            this.token.Size = new System.Drawing.Size(52, 17);
+            this.token.TabIndex = 10;
+            this.token.Text = "Token:";
             // 
             // connect
             // 
@@ -112,8 +102,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(443, 383);
             this.Controls.Add(this.connect);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.token);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.password);
@@ -134,8 +123,7 @@
         private System.Windows.Forms.TextBox password;
         private System.Windows.Forms.TextBox email;
         private System.Windows.Forms.Button click_validate;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label token;
         private System.Windows.Forms.Label connect;
     }
 }

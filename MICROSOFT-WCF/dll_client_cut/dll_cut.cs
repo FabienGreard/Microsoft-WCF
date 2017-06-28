@@ -13,7 +13,7 @@ namespace dll_client_cut
 
         public STG checkData(STG msg)
         {
-            if (typeof(List<object>) == msg.data.GetType())
+            if (msg.data[0].GetType() == typeof(object[]))
             {
                 msg.statut_op = true;
             }

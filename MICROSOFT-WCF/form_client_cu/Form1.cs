@@ -40,22 +40,28 @@ namespace form_client_cu
         {
             if(!string.IsNullOrEmpty(this.email.Text) && !string.IsNullOrEmpty(this.password.Text))
             {
-                this.msg.data = new List<object>
-                {
-                    new { email = this.email.Text, password = this.password.Text }
-                };
+                this.msg.data = new object[2];
+                this.msg.data[0] = this.email.Text;
+                this.msg.data[1] = this.password.Text;
+
                 this.msg.operationName = "auth";
 
                 try
                 {
-                    cut.checkData(this.serviceContract.m_service(cut.checkData(this.msg)));
+                    this.msg = cut.checkData(this.serviceContract.m_service(cut.checkData(this.msg)));
                 }
                 catch
                 {
                     this.connect.Text = "Erreur de connexion";
                 }
                 
+                if(this.msg.info == "13, user connected")
+                {
+                    this.connect.Text = "Connected";
+                    this.token.Text = "Token : " + this.msg.tokenUser;
+                }
             }
         }
+
     }
 }

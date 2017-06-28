@@ -54,6 +54,10 @@
       <Project>{8a58f301-fc74-4a63-8e29-43b95e5c82d8}</Project>
       <Name>dll_service_contract</Name>
     </ProjectReference>
+    <ProjectReference Include="..\service.cs\service.csproj">
+      <Project>{1c8ca736-ab14-46cd-aa63-9e7960a07deb}</Project>
+      <Name>service</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

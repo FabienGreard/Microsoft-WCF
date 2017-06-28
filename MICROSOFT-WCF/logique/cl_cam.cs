@@ -14,7 +14,7 @@ namespace logique
 
             if (msg.operationName == "auth")
             {
-                new cl_cm_auth().auth(msg);
+                msg = new cl_cm_auth().auth(msg);
             }
             else if (msg.operationName == "decode")
             {
@@ -34,6 +34,11 @@ namespace logique
             {
                 msg.statut_op = false;
                 msg.info = "error tokenApll";
+            }
+            else
+            {
+                msg.statut_op = true;
+                msg.info = "13, ok";
             }
 
             return msg;

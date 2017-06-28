@@ -10,12 +10,12 @@ namespace dll_stg
     {
         public bool statut_op;
         public string info;
-        public List<object> data;
+        public object[] data;
         public string operationName;
         public string tokenApll;
         public string tokenUser;
 
-        public STG(bool _statut_op, string _info, List<object> _data, string _operationName, string _tokenApll, string _tokenUser) : this()
+        public STG(bool _statut_op, string _info, object[] _data, string _operationName, string _tokenApll, string _tokenUser) : this()
         {
             this.statut_op = _statut_op;
             this.info = _info;

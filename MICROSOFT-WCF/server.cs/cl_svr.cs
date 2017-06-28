@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.ServiceModel;
 using dll_service_contract;
+using service;
 
 namespace server
 {
@@ -12,7 +13,7 @@ namespace server
     {
         static void Main(string[] args)
         {
-            /*ServiceHost svch = new ServiceHost(typeof(IServiceContract),
+            /*ServiceHost svch = new ServiceHost(typeof(cl_svc),
                  new Uri("http://localhost/"));
             svch.AddServiceEndpoint(
                typeof(IServiceContract),
@@ -21,7 +22,7 @@ namespace server
             Console.WriteLine("Press <ENTER> to escape");
             Console.Read();*/
 
-            ServiceHost svch = new ServiceHost(typeof(IServiceContract),
+            ServiceHost svch = new ServiceHost(typeof(cl_svc),
                  new Uri("net.tcp://localhost/"));
             svch.AddServiceEndpoint(
                typeof(IServiceContract),

@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="cl_cam.cs" />
     <Compile Include="cl_cm_auth.cs" />
+    <Compile Include="cl_cm_session.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
