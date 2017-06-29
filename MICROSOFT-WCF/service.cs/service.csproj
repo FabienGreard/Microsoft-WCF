@@ -41,9 +41,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="cl_svc.cs" />
+    <Compile Include="cl_svc_http.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\dll_data_contract\dll_data_contract.csproj">
+      <Project>{c86ab9fd-2f53-473b-a286-a78f2e429d37}</Project>
+      <Name>dll_data_contract</Name>
+    </ProjectReference>
     <ProjectReference Include="..\dll_service_contract\dll_service_contract.csproj">
       <Project>{8a58f301-fc74-4a63-8e29-43b95e5c82d8}</Project>
       <Name>dll_service_contract</Name>

@@ -29,6 +29,13 @@ namespace form_client_cu
                 tokenApll = "GEN_WCF",
             };
 
+            this.file.Items.Add("P1E.txt");
+            this.file.Items.Add("P1G.txt");
+            this.file.Items.Add("P1A.txt");
+            this.file.Items.Add("P1B.txt");
+            this.file.Items.Add("P1D.txt");
+            this.file.Items.Add("P1F.txt");
+            this.file.Items.Add("P1C.txt");
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -63,5 +70,53 @@ namespace form_client_cu
             }
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(this.msg.tokenUser))
+            {
+                this.msg.data = new object[3];
+                this.msg.data[0] = ""; //key
+                this.msg.data[1] = "";  //content
+                this.msg.data[2] = this.file.SelectedItem; ;  //file
+
+                this.msg.operationName = "decode";
+                
+                try
+                {
+                    while (this.msg.info != "13, decoded")
+                    {
+                        this.msg = cut.checkData(this.serviceContract.m_service(cut.checkData(cut.sendData(this.msg))));
+                    }
+                }
+                catch
+                {
+                    this.connect.Text = "Erreur de connexion";
+                }
+
+                if (this.msg.info == "13, decoded")
+                {
+                    this.connect.Text = "decoded";
+                }
+
+                if (this.msg.info == "13, verified")
+                {
+                    this.connect.Text = "Email found";
+                }
+            }
+            else
+            {
+                this.connect.Text = "Aucune session active";
+            }
+        }
+
+        private void file_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void password_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

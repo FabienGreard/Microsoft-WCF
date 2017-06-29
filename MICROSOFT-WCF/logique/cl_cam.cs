@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using dll_stg;
+using dll_data_contract;
+using System.Web.Script.Serialization;
 
 namespace logique
 {
@@ -18,7 +20,22 @@ namespace logique
             }
             else if (msg.operationName == "decode")
             {
+                msg = new cl_cm_decode().decode(msg);
+            }
+            else
+            {
+                msg.statut_op = false;
+                msg.info = "error operationName";
+            }
 
+            return msg;
+        }
+
+        public static Json resolveServiceHttp(Json msg, string type)
+        {
+            if (type == "post")
+            {
+                Console.WriteLine("{ 'file': " + msg.file + ", 'key': " + msg.key + " ,'text': " + msg.text + ", 'pourcentage': " + msg.pourcentage + ", 'email': " + msg.email + "}");
             }
             else
             {

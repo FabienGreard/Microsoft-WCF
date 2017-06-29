@@ -1,11 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.ServiceModel;
+using System.ServiceModel.Web;
 using dll_service_contract;
 using service;
+using System.ServiceModel.Description;
 
 namespace server
 {
@@ -13,21 +11,14 @@ namespace server
     {
         static void Main(string[] args)
         {
-            /*ServiceHost svch = new ServiceHost(typeof(cl_svc),
-                 new Uri("http://localhost/"));
-            svch.AddServiceEndpoint(
-               typeof(IServiceContract),
-               new BasicHttpBinding(), "SERVICES");
-            svch.Open();
-            Console.WriteLine("Press <ENTER> to escape");
-            Console.Read();*/
+            WebServiceHost webHost = new WebServiceHost(typeof(cl_svc_http), new Uri("http://localhost:8088/"));
+            ServiceEndpoint ep = webHost.AddServiceEndpoint(typeof(IServiceContractHttp), new WebHttpBinding(), "HTTP");
+            webHost.Open();
 
-            ServiceHost svch = new ServiceHost(typeof(cl_svc),
-                 new Uri("net.tcp://localhost/"));
-            svch.AddServiceEndpoint(
-               typeof(IServiceContract),
-               new NetTcpBinding(), "SERVICES");
+            ServiceHost svch = new ServiceHost(typeof(cl_svc), new Uri("net.tcp://localhost/"));
+            svch.AddServiceEndpoint(typeof(IServiceContract), new NetTcpBinding(), "SERVICES");
             svch.Open();
+
             Console.WriteLine("Press <ENTER> to escape");
             Console.Read();
         }

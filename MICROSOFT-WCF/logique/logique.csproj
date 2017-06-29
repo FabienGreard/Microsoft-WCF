@@ -32,6 +32,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -42,6 +44,7 @@
   <ItemGroup>
     <Compile Include="cl_cam.cs" />
     <Compile Include="cl_cm_auth.cs" />
+    <Compile Include="cl_cm_decode.cs" />
     <Compile Include="cl_cm_session.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -49,6 +52,10 @@
     <ProjectReference Include="..\data\data.csproj">
       <Project>{f411a870-cb50-4c70-b047-1ee821ad9dd9}</Project>
       <Name>data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\dll_data_contract\dll_data_contract.csproj">
+      <Project>{c86ab9fd-2f53-473b-a286-a78f2e429d37}</Project>
+      <Name>dll_data_contract</Name>
     </ProjectReference>
     <ProjectReference Include="..\dll_stg\dll_stg.csproj">
       <Project>{b959a93a-0722-4802-b3c7-d302aa545067}</Project>
